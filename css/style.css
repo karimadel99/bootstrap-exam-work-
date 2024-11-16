@@ -1,0 +1,137 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Home Section */
+#home {
+  height: 80vh;
+  background-image: url(../images/hero_2.jpg);
+  position: relative;
+}
+#home .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+#home .container {
+  z-index: 2;
+  position: relative;
+}
+
+/* About Section */
+#about .card {
+  border: none;
+  padding: 15px;
+  transition: all .4s;
+}
+#about .card:hover {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+/* Portfolio Item */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* On Hover - Image Zoom Effect */
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay Layer */
+.portfolio-item .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* On Hover - Show Overlay */
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Overlay Text Styling */
+.portfolio-item .overlay p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer Styling */
+footer {
+  font-size: 0.9rem;
+}
+
+.footer-heading {
+  font-size: 1.3rem;
+  color: #f8f9fa;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: #a6a6a6;
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  color: #717171;
+  font-size: 0.85rem;
+}
+
+.footer-link {
+  color: #cfcfcf;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-icon {
+  font-size: 1.2rem;
+  color: #cfcfcf;
+  transition: color 0.3s;
+}
+
+.footer-icon:hover {
+  color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-heading {
+    font-size: 1.2rem;
+  }
+  
+  .footer-text, .footer-link, .footer-bottom {
+    font-size: 0.85rem;
+  }
+}
